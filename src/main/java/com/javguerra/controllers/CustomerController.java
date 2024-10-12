@@ -19,7 +19,7 @@ public class CustomerController {
     private void thereAreCustomer() {
         if (customerService.getAllCustomers().isEmpty()) {
             System.out.println("No hay clientes. Debe crear al menos uno.");
-            boolean exit = false;
+            boolean exit;
             do { // hasta que se guarde un cliente
                 exit = newCustomer();
             } while (!exit);

@@ -16,38 +16,38 @@ public interface CustomerRepository {
      * Devuelve una lista de usuarios
      * @return ArrayList<Customer>
      */
-    public ArrayList<Customer> findAll();
+    ArrayList<Customer> findAll();
 
     /**
      * Devuelve un usuario por id
      * @param id Long
      * @return Optional<Customer>
      */
-    public Optional<Customer> findById(Long id);
+     Optional<Customer> findById(Long id);
 
     /**
      * Agrega un usuario
      * @param customer Customer
      * @return boolean
      */
-    public boolean save(Customer customer);
+    boolean save(Customer customer);
 
     /**
      * Actualiza un usuario
      * @param id Long
      * @param customer Customer
      */
-    public void update(Long id, Customer customer);
+    void update(Long id, Customer customer);
 
     /**
      * Elimina un usuario
      * @param id Long
      * @return boolean
      */
-    public boolean removeById(Long id);
+    boolean removeById(Long id);
 
     /**
      * Elimina todos los usuarios
      */
-    public void removeAll();
+    void removeAll();
 }

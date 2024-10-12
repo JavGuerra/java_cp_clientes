@@ -3,8 +3,8 @@ package main.java.com.javguerra.services;
 import main.java.com.javguerra.entities.Customer;
 import main.java.com.javguerra.repositories.CustomerRepository;
 
-import java.util.ArrayList;
 import java.util.Optional;
+import java.util.ArrayList;
 
 import static main.java.com.javguerra.utils.ConsoleInput.*;
 
@@ -28,7 +28,7 @@ public class CustomerService {
 
     /**
      * Comprueba si existe un cliente por su id,
-     * si no existe, muestra un mensaje y devuelve vacio
+     * si no existe, muestra un mensaje y devuelve vacío
      * @return Optional<Customer>
      */
     public Optional<Customer> existById() {
@@ -49,7 +49,7 @@ public class CustomerService {
     }
 
     /**
-     * Devuelve un cliente por la id dada
+     * Devuelve un cliente por su id dada
      * @param id long
      * @return Optional<Customer>
      */
