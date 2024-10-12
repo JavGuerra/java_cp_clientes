@@ -2,7 +2,7 @@
 
 ## Tema: Gestión de clientes
 
-**Autor**: Javier Guerra
+**Autor**: Javier Guerra  
 **Status**: Finalizado  
 **Versión**: 1.0.0  
 **Fecha**: 2024-10-12
