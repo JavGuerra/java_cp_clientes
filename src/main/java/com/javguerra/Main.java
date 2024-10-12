@@ -30,7 +30,7 @@ public class Main {
             new CustomerController(
                 new CustomerService(
                     new CustomerRepositoryImpl(
-                            getCustomers(true)
+                        getCustomers(true)
                     )
                 )
             );
