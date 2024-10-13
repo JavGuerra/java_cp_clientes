@@ -10,13 +10,13 @@ public class CustomerController {
 
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
-        thereAreCustomer();
+        thereAreCustomers();
     }
 
     /**
      * Comprueba si hay clientes y si no, crea uno
      */
-    private void thereAreCustomer() {
+    private void thereAreCustomers() {
         if (customerService.getAllCustomers().isEmpty()) {
             System.out.println("No hay clientes. Debe crear al menos uno.");
             boolean exit;
@@ -70,13 +70,13 @@ public class CustomerController {
         customerService.listAllAccounts();
         Optional<Customer> customer = customerService.existById();
         customer.ifPresent(value -> customerService.removeById(value.getId()));
-        thereAreCustomer();
+        thereAreCustomers();
     }
 
     /**
      * Elimina todos los clientes
      */
     public void deleteAllCustomers() {
-        if (customerService.removeAll()) thereAreCustomer();
+        if (customerService.removeAll()) thereAreCustomers();
     }
 }
