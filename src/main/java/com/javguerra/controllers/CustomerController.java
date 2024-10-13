@@ -77,6 +77,7 @@ public class CustomerController {
      * Elimina todos los clientes
      */
     public void deleteAllCustomers() {
+        System.out.println("Eliminar los clientes");
         if (customerService.removeAll()) thereAreCustomers();
     }
 }
