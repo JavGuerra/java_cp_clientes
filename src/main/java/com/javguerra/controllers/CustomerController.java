@@ -6,10 +6,10 @@ import main.java.com.javguerra.services.CustomerService;
 import java.util.Optional;
 
 public class CustomerController {
-    private static CustomerService customerService;
+    private final CustomerService customerService;
 
     public CustomerController(CustomerService customerService) {
-        CustomerController.customerService = customerService;
+        this.customerService = customerService;
         thereAreCustomer();
     }
 

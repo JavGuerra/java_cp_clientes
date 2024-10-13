@@ -11,8 +11,7 @@ public class Customer {
     private int edad;
 
     // constructores
-    public Customer() {
-    }
+    public Customer() {}
 
     public Customer(Long id, String nombre, String apellido, String email, int edad) {
         this.id = id;

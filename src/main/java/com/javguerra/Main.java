@@ -16,7 +16,6 @@ import static main.java.com.javguerra.utils.ConsoleInput.*;
  * @since 2024-10-12
  */
 public class Main {
-
     private static CustomerController controller;
 
     /**
