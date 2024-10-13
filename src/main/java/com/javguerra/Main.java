@@ -69,7 +69,7 @@ public class Main {
         3. Crear un nuevo cliente
         4. Actualizar un cliente
         5. Eliminar un cliente
-        6. Eliminar todos los clientes
+        6. Eliminar los clientes
         0. Salir
         """;
         byte opt;
