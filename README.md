@@ -4,8 +4,9 @@
 
 **Autor**: Javier Guerra  
 **Status**: Finalizado  
-**Versión**: 1.0.0  
-**Fecha**: 2024-10-12
+**Versión**: 1.1.0  
+**Fecha**: 2024-10-12  
+**Última**: 2024-10-18
 
 ## Descripción
 
@@ -20,6 +21,13 @@ Las opciones que se van a desarrollar son:
 - Eliminar un cliente
 - Eliminar todos los clientes
 
+Implementa:
+
+- Estructura MVC
+- Interfaces para el repositorio y el servicio
+- Clase «ConsoleInput» para la gestión de consola
+- JavaDoc
+
 ## Requisitos
 
 Se requiere Java 11 o superior.
@@ -27,3 +35,7 @@ Se requiere Java 11 o superior.
 ## Licencia
 
 Sobre el código fuente: GNU GENERAL PUBLIC LICENSE Version 3
+
+## Saber más
+
+[Información sobre el uso de la clase ConsoleInput](https://javguerra.github.io/blog/clase-scanner-java/)

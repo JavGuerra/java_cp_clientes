@@ -1,14 +1,14 @@
 package main.java.com.javguerra.controllers;
 
 import main.java.com.javguerra.entities.Customer;
-import main.java.com.javguerra.services.CustomerService;
+import main.java.com.javguerra.services.CustomerServiceImpl;
 
 import java.util.Optional;
 
 public class CustomerController {
-    private final CustomerService customerService;
+    private final CustomerServiceImpl customerService;
 
-    public CustomerController(CustomerService customerService) {
+    public CustomerController(CustomerServiceImpl customerService) {
         this.customerService = customerService;
         thereAreCustomers();
     }

@@ -2,7 +2,7 @@ package main.java.com.javguerra;
 
 import main.java.com.javguerra.entities.Customer;
 import main.java.com.javguerra.repositories.CustomerRepositoryImpl;
-import main.java.com.javguerra.services.CustomerService;
+import main.java.com.javguerra.services.CustomerServiceImpl;
 import main.java.com.javguerra.controllers.CustomerController;
 
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ public class Main {
         // el servicio y el controlador de la aplicación
         controller =
             new CustomerController(
-                new CustomerService(
+                new CustomerServiceImpl(
                     new CustomerRepositoryImpl(
                         getCustomers(true)
                     )
