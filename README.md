@@ -3,7 +3,7 @@
 ## Tema: Gestión de clientes
 
 **Autor**: Javier Guerra  
-**Status**: Finalizado  
+**Estátus**: Finalizado  
 **Versión**: 1.1.0  
 **Fecha**: 2024-10-12  
 **Última**: 2024-10-18
@@ -12,7 +12,7 @@
 
 En este caso práctico se va a desarrollar un CRUD (Crear, Leer, Actualizar y Eliminar) para gestionar clientes.
 
-Las opciones que se van a desarrollar son:
+Las opciones del menú son:
 
 - Listar clientes
 - Mostrar un cliente
@@ -38,4 +38,4 @@ Sobre el código fuente: GNU GENERAL PUBLIC LICENSE Version 3
 
 ## Saber más
 
-[Información sobre el uso de la clase ConsoleInput](https://javguerra.github.io/blog/clase-scanner-java/)
+- [Información sobre el uso de la clase ConsoleInput](https://javguerra.github.io/blog/clase-scanner-java/)
