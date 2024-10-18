@@ -24,8 +24,8 @@ Las opciones que se van a desarrollar son:
 Implementa:
 
 - Estructura MVC
-- Interfaces para el repositorio y el servicio
-- Clase «ConsoleInput» para la gestión de consola
+- Interfaz para el repositorio y el servicio
+- Utilidad «ConsoleInput» para la gestión de consola
 - JavaDoc
 
 ## Requisitos
