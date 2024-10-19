@@ -20,7 +20,7 @@ public class Main {
 
     /**
      * Aplicación
-     * @param args
+     * @param args argumentos de la línea de comandos
      */
     public static void main(String[] args) {
         // Crea el repositorio de clientes, e inicializa
