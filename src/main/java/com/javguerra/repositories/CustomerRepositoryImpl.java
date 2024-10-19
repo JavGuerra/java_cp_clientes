@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class CustomerRepositoryImpl implements CustomerRepository {
+
     // atributos
     private List<Customer> customers = new ArrayList<>();
 
@@ -18,17 +19,20 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     // métodos
+    @Override
     public ArrayList<Customer> findAll() {
         // devolver un clon para evitar que lo modifiquen desde afuera.
         return new ArrayList<>(customers);
     }
 
+    @Override
     public Optional<Customer> findById(Long id) {
         return customers.stream()
                 .filter(customer -> customer.getId().equals(id))
                 .findFirst();
     }
 
+    @Override
     public boolean save(Customer customer) {
         try {
             return customers.add(customer);
@@ -37,6 +41,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         }
     }
 
+    @Override
     public void update(Long id, Customer customer) {
         Customer cliente = findById(id).orElse(null);
         if (cliente == null) return;
@@ -61,11 +66,14 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         }
     }
 
+    @Override
     public boolean removeById(Long id) {
         return customers.removeIf(c -> c.getId().equals(id));
     }
 
+    @Override
     public void removeAll() {
         customers.clear();
     }
+
 }

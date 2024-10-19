@@ -3,6 +3,7 @@ package main.java.com.javguerra.entities;
 import java.util.StringJoiner;
 
 public class Customer {
+
     // atributos
     private Long id;
     private String nombre;
@@ -73,4 +74,5 @@ public class Customer {
                 .add("edad=" + edad)
                 .toString();
     }
+
 }

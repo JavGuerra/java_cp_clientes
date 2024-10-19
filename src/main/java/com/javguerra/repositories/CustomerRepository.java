@@ -12,6 +12,7 @@ No usa base de datos, usa un ArrayList en memoria
 Tiene las operaciones CRUD sobre Customer.
  */
 public interface CustomerRepository {
+
     /**
      * Devuelve una lista de usuarios
      * @return ArrayList<Customer>
@@ -50,4 +51,5 @@ public interface CustomerRepository {
      * Elimina todos los usuarios
      */
     void removeAll();
+
 }

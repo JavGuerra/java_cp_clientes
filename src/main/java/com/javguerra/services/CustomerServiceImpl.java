@@ -16,6 +16,7 @@ public class CustomerServiceImpl implements CustomerService {
         this.customerRepository = customerRepository;
     }
 
+    @Override
     public long getMaxId() {
         return customerRepository.findAll().stream()
                 .mapToLong(Customer::getId)
@@ -23,6 +24,7 @@ public class CustomerServiceImpl implements CustomerService {
                 .orElse(0L);
     }
 
+    @Override
     public Optional<Customer> existById() {
         Optional<Customer> customer = findById();
         if (customer.isEmpty()) {
@@ -32,25 +34,30 @@ public class CustomerServiceImpl implements CustomerService {
         return customer;
     }
 
+    @Override
     public Optional<Customer> findById() {
         return customerRepository.findById(getLongIntPos("Id: "));
     }
 
+    @Override
     public Optional<Customer> findById(long id) {
         if (id <= 0 || id > getMaxId()) return Optional.empty();
         return customerRepository.findById(id);
     }
 
+    @Override
     public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
 
+    @Override
     public void listAllAccounts() {
         for (Customer customer : getAllCustomers()) {
             System.out.println(customer);
         }
     }
 
+    @Override
     public Customer createNewCustomer() {
         Customer customer = new Customer();
         customer.setId(getMaxId() + 1L);
@@ -61,6 +68,7 @@ public class CustomerServiceImpl implements CustomerService {
         return customer;
     }
 
+    @Override
     public void updateById(long id) {
         if (id <= 0 || id > getMaxId() || findById(id).isEmpty()) return;
         System.out.println(findById(id).get());
@@ -76,6 +84,7 @@ public class CustomerServiceImpl implements CustomerService {
         else System.out.println("No se ha actualizado el cliente.");
     }
 
+    @Override
     public boolean save(Customer customer) {
         if (getYesNo("¿Desea guardar los datos (S/N)? ")) {
             customerRepository.save(customer);
@@ -86,6 +95,7 @@ public class CustomerServiceImpl implements CustomerService {
         return false;
     }
 
+    @Override
     public void removeById(long id) {
         if (id <= 0 || id > getMaxId() || findById(id).isEmpty()) return;
         System.out.println(findById(id).get());
@@ -97,6 +107,7 @@ public class CustomerServiceImpl implements CustomerService {
         else System.out.println("No se ha eliminado el cliente.");
     }
 
+    @Override
     public boolean removeAll() {
         if (getYesNo("¿Desea eliminar todos los clientes (S/N)? ")) {
             customerRepository.removeAll();
@@ -106,4 +117,5 @@ public class CustomerServiceImpl implements CustomerService {
         else System.out.println("No se han eliminado los clientes.");
         return false;
     }
+
 }

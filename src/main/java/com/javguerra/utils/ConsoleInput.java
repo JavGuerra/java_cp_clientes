@@ -170,4 +170,5 @@ public class ConsoleInput {
     public static void closeScanner() {
         IN.close();
     }
+
 }

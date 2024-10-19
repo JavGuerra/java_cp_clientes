@@ -74,4 +74,5 @@ public interface CustomerService {
      * @return boolean
      */
     boolean removeAll();
+
 }
