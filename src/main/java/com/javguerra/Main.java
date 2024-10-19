@@ -2,8 +2,8 @@ package main.java.com.javguerra;
 
 import main.java.com.javguerra.entities.Customer;
 import main.java.com.javguerra.repositories.CustomerRepositoryImpl;
-import main.java.com.javguerra.services.CustomerServiceImpl;
 import main.java.com.javguerra.controllers.CustomerController;
+import main.java.com.javguerra.services.CustomerServiceImpl;
 
 import java.util.ArrayList;
 
@@ -25,14 +25,13 @@ public class Main {
     public static void main(String[] args) {
         // Crea el repositorio de clientes, e inicializa
         // el servicio y el controlador de la aplicación
-        controller =
-            new CustomerController(
-                new CustomerServiceImpl(
-                    new CustomerRepositoryImpl(
-                        getCustomers(true)
-                    )
+        controller = new CustomerController(
+            new CustomerServiceImpl(
+                new CustomerRepositoryImpl(
+                    getCustomers(true)
                 )
-            );
+            )
+        );
         // Llama al menú de la aplicación
         selectOptions();
         // Termina la aplicación

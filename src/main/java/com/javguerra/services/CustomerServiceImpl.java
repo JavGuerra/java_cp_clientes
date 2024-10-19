@@ -3,12 +3,13 @@ package main.java.com.javguerra.services;
 import main.java.com.javguerra.entities.Customer;
 import main.java.com.javguerra.repositories.CustomerRepository;
 
-import java.util.ArrayList;
 import java.util.Optional;
+import java.util.List;
 
 import static main.java.com.javguerra.utils.ConsoleInput.*;
 
 public class CustomerServiceImpl implements CustomerService {
+
     private final CustomerRepository customerRepository;
 
     public CustomerServiceImpl(CustomerRepository customerRepository) {
@@ -40,7 +41,7 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.findById(id);
     }
 
-    public ArrayList<Customer> getAllCustomers() {
+    public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
 
@@ -53,8 +54,8 @@ public class CustomerServiceImpl implements CustomerService {
     public Customer createNewCustomer() {
         Customer customer = new Customer();
         customer.setId(getMaxId() + 1L);
-        customer.setNombre(getWord("Nombre: "));
-        customer.setApellido(getWord("Apellido: "));
+        customer.setNombre(getString("Nombre: "));
+        customer.setApellido(getString("Apellidos: "));
         customer.setEmail(getWord("Email: "));
         customer.setEdad(getLongIntPos("Edad: ").intValue());
         return customer;

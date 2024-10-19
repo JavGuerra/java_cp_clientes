@@ -2,8 +2,8 @@ package main.java.com.javguerra.services;
 
 import main.java.com.javguerra.entities.Customer;
 
+import java.util.List;
 import java.util.Optional;
-import java.util.ArrayList;
 
 public interface CustomerService {
 
@@ -36,7 +36,7 @@ public interface CustomerService {
      * Devuelve la lista de clientes
      * @return ArrayList<Customer>
      */
-    ArrayList<Customer> getAllCustomers();
+    List<Customer> getAllCustomers();
 
     /**
      * Lista todos los clientes

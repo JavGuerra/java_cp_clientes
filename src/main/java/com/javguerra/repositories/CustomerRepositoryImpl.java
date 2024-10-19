@@ -3,16 +3,17 @@ package main.java.com.javguerra.repositories;
 import main.java.com.javguerra.entities.Customer;
 
 import java.util.Optional;
+import java.util.List;
 import java.util.ArrayList;
 
 public class CustomerRepositoryImpl implements CustomerRepository {
     // atributos
-    private ArrayList<Customer> customers = new ArrayList<>();
+    private List<Customer> customers = new ArrayList<>();
 
     // constructores
     public CustomerRepositoryImpl() {}
 
-    public CustomerRepositoryImpl(ArrayList<Customer> customers) {
+    public CustomerRepositoryImpl(List<Customer> customers) {
         this.customers = customers;
     }
 
