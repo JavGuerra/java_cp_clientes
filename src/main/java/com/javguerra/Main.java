@@ -12,7 +12,7 @@ import static main.java.com.javguerra.utils.ConsoleInput.*;
 /**
  * Aplicación CRUD Customer
  * @author Javier Guerra
- * @version 1.0
+ * @version 1.1.0
  * @since 2024-10-12
  */
 public class Main {
